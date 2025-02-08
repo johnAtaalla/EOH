@@ -38,7 +38,7 @@ export function Layout({ children }: { children: React.ReactNode }) {
           <div className="flex items-center justify-start space-x-8 ml-4 md:ml-8">
             <div className="w-24 h-12 relative">
               <Image
-                src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/amflag.jpg-i01rIQRqYqoXfyVQ25jZhTcsNaPafs.jpeg"
+                src="/images/amflag.png"
                 alt="US Flag"
                 fill
                 className="object-contain"
@@ -47,7 +47,7 @@ export function Layout({ children }: { children: React.ReactNode }) {
             <div className="h-12 w-px bg-gray-600"></div>
             <div className="w-48 h-24 relative">
               <Image
-                src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/logo-xy3UpZacmWvyIdNZyxHq5VY2e2qNNn.png"
+                src="/images/logo.png"
                 alt="EOH Aerospace"
                 fill
                 className="object-contain"
