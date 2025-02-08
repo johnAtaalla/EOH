@@ -1,6 +1,6 @@
-let userConfig = undefined
+let userConfig;
 try {
-  userConfig = await import('./v0-user-next.config')
+  userConfig = await import('./v0-user-next.config');
 } catch (e) {
   // ignore error
 }
@@ -8,8 +8,8 @@ try {
 /** @type {import('next').NextConfig} */
 const nextConfig = {
   output: 'export', // Required for static export
-  basePath: '/EOH',
-  assetPrefix:'/EOH',
+  basePath: '/EOH', // 👈 Set to your actual repo name
+  assetPrefix: '/EOH', // 👈 Fixes asset loading for GitHub Pages
   reactStrictMode: true,
   eslint: {
     ignoreDuringBuilds: true,
@@ -25,30 +25,11 @@ const nextConfig = {
     parallelServerBuildTraces: true,
     parallelServerCompiles: true,
   },
+};
+
+// Merge userConfig if it exists
+if (userConfig?.default) {
+  Object.assign(nextConfig, userConfig.default);
 }
 
-mergeConfig(nextConfig, userConfig)
-
-function mergeConfig(nextConfig, userConfig) {
-  if (!userConfig) {
-    return
-  }
-
-  for (const key in userConfig) {
-    if (
-      typeof nextConfig[key] === 'object' &&
-      !Array.isArray(nextConfig[key])
-    ) {
-      nextConfig[key] = {
-        ...nextConfig[key],
-        ...userConfig[key],
-      }
-    } else {
-      nextConfig[key] = userConfig[key]
-    }
-  }
-}
-
-
-
-export default nextConfig
+export default nextConfig;

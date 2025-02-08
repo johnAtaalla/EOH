@@ -1,4 +1,5 @@
 "use client"
+export const dynamic = 'force-static';
 
 // Inspired by react-hot-toast library
 import * as React from "react"

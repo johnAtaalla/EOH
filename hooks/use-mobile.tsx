@@ -1,4 +1,5 @@
 import * as React from "react"
+export const dynamic = 'force-static';
 
 const MOBILE_BREAKPOINT = 768
 

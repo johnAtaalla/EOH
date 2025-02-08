@@ -9,8 +9,8 @@ export function Logo() {
         <Image
           src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/logo-xy3UpZacmWvyIdNZyxHq5VY2e2qNNn.png"
           alt="EOH Aerospace"
-          width={400}
-          height={400}
+          width={150}
+          height={100}
           className="w-full h-auto"
           priority
         />
