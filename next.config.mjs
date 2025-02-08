@@ -7,6 +7,10 @@ try {
 
 /** @type {import('next').NextConfig} */
 const nextConfig = {
+  output: 'export', // Required for static export
+  basePath: '/EOH',
+  assetPrefix:'/EOH',
+  reactStrictMode: true,
   eslint: {
     ignoreDuringBuilds: true,
   },
@@ -44,5 +48,7 @@ function mergeConfig(nextConfig, userConfig) {
     }
   }
 }
+
+
 
 export default nextConfig
