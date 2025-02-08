@@ -1,5 +1,5 @@
 import { Layout } from "../components/layout"
-
+export const dynamic = 'force-static';
 export default function Contact() {
   return (
     <Layout>

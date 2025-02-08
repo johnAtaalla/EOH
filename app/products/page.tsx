@@ -1,5 +1,5 @@
 "use client"
-
+export const dynamic = 'force-static';
 import Image from "next/image"
 import { motion } from "framer-motion"
 import { Layout } from "../components/layout"
