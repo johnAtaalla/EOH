@@ -6,6 +6,7 @@ import { Logo } from "./logo";
 import type React from "react";
 import { useState } from "react";
 import { Menu, X } from "lucide-react";
+import logoImage from '/public/images/logo.png'
 
 export function Layout({ children }: { children: React.ReactNode }) {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -49,7 +50,7 @@ export function Layout({ children }: { children: React.ReactNode }) {
             <div className="h-12 w-px bg-gray-600"></div>
             <div className="w-48 h-24 relative">
               <Image
-                src="/images/logo.png"
+                src={logoImage}
                 alt="EOH Aerospace"
                 fill
                 className="object-contain"
