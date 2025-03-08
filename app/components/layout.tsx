@@ -1,14 +1,14 @@
 "use client";
-export const dynamic = 'force-static';
-import Link from "next/link"
-import Image from "next/image"
-import { Logo } from "./logo"
-import type React from "react"
-import { useState } from "react"
-import { Menu, X } from "lucide-react"
+export const dynamic = "force-static";
+import Link from "next/link";
+import Image from "next/image";
+import { Logo } from "./logo";
+import type React from "react";
+import { useState } from "react";
+import { Menu, X } from "lucide-react";
 
 export function Layout({ children }: { children: React.ReactNode }) {
-  const [isMenuOpen, setIsMenuOpen] = useState(false)
+  const [isMenuOpen, setIsMenuOpen] = useState(false);
 
   return (
     <div className="flex flex-col min-h-screen bg-gray-900 text-gray-100">
@@ -32,13 +32,15 @@ export function Layout({ children }: { children: React.ReactNode }) {
           </nav>
         )}
       </header>
-      <main className="flex-grow container mx-auto px-4 py-6 md:py-8">{children}</main>
+      <main className="flex-grow container mx-auto px-4 py-6 md:py-8">
+        {children}
+      </main>
       <footer className="bg-gray-800 py-6">
         <div className="container mx-auto px-4">
           <div className="flex items-center justify-start space-x-8 ml-4 md:ml-8">
             <div className="w-24 h-12 relative">
               <Image
-                src="/images/amflag.png"
+                src="/images/amflag.jpg"
                 alt="US Flag"
                 fill
                 className="object-contain"
@@ -54,18 +56,26 @@ export function Layout({ children }: { children: React.ReactNode }) {
               />
             </div>
           </div>
-          <p className="mt-4 text-sm text-center px-4">&copy; 2025 EOH Aerospace. All rights reserved.</p>
+          <p className="mt-4 text-sm text-center px-4">
+            &copy; 2025 EOH Aerospace. All rights reserved.
+          </p>
         </div>
       </footer>
     </div>
-  )
+  );
 }
 
-function NavLinks({ mobile, setIsMenuOpen }: { mobile?: boolean; setIsMenuOpen?: (isOpen: boolean) => void }) {
+function NavLinks({
+  mobile,
+  setIsMenuOpen,
+}: {
+  mobile?: boolean;
+  setIsMenuOpen?: (isOpen: boolean) => void;
+}) {
   const linkClass = mobile
     ? "block py-2 px-4 hover:bg-gray-700 transition-colors duration-200"
-    : "hover:text-gray-300 transition-colors duration-200"
-  const onClick = mobile ? () => setIsMenuOpen?.(false) : undefined
+    : "hover:text-gray-300 transition-colors duration-200";
+  const onClick = mobile ? () => setIsMenuOpen?.(false) : undefined;
 
   return (
     <ul className={mobile ? "space-y-2" : "flex space-x-6"}>
@@ -95,6 +105,5 @@ function NavLinks({ mobile, setIsMenuOpen }: { mobile?: boolean; setIsMenuOpen?:
         </Link>
       </li>
     </ul>
-  )
+  );
 }
-
