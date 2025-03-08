@@ -9,7 +9,7 @@ try {
 const nextConfig = {
   output: "export", // Required for static export
   basePath: "/EOH", // 👈 Set to your actual repo name
-  assetPrefix: "/", // 👈 Fixes asset loading for GitHub Pages
+  assetPrefix: "/EOH", // 👈 Fixes asset loading for GitHub Pages
   reactStrictMode: true,
   eslint: {
     ignoreDuringBuilds: true,
