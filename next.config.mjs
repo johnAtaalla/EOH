@@ -8,7 +8,7 @@ try {
 /** @type {import('next').NextConfig} */
 const nextConfig = {
   output: "export", // Required for static export
-  basePath: "", // 👈 Set to your actual repo name
+  basePath: "/EOH", // 👈 Set to your actual repo name
   assetPrefix: "/", // 👈 Fixes asset loading for GitHub Pages
   reactStrictMode: true,
   eslint: {
